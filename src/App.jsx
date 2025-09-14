@@ -1,7 +1,9 @@
+import Header from "./components/Header.jsx";
+
 function App() {
   return (
     <>
-      <h1>CV Application</h1>
+      <Header title="CV Application with Chicken!" showExtraOptions={false} />
     </>
   );
 }
