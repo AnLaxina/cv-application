@@ -8,3 +8,14 @@
     font-size: var(--body-text);
     font-weight: var(--body-weight);
 }
+
+/* For neutral things such as Reset, Cancel, etc. */
+.secondary {
+    background-color: var(--background);
+    padding: var(--padding-small) var(--padding-medium);
+    border: solid 2px var(--border);
+    border-radius: 0.375rem;
+    color: var(--primary-text);
+    font-size: var(--body-text);
+    font-weight: var(--body-weight);
+}

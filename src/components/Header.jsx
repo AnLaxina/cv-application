@@ -18,6 +18,7 @@ export default function Header({ title, showExtraOptions = false }) {
         <ul className="navigation-links">{listToComponent(options)}</ul>
       </nav>
       <Button text="Chicken" type="primary" />
+      <Button text="Chicken Nugget" type="secondary" />
     </header>
   );
 }
