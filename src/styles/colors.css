@@ -1,0 +1,9 @@
+:root {
+    --background: #f9fafb;
+    --primary-text: #111827;
+    --secondary-text: #6b7280;
+    /* For links, highlights, buttons */
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border: #e5e7eb;
+}
