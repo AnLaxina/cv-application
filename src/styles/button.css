@@ -19,3 +19,12 @@
     font-size: var(--body-text);
     font-weight: var(--body-weight);
 }
+
+/* For inline actions such as "+ Add Education */
+.link {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    font-size: var(--small-text);
+    font-weight: var(--body-weight);
+}
