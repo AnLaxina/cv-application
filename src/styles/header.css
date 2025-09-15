@@ -1,0 +1,29 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--background);
+    padding: var(--padding-medium);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-links {
+    display: flex;
+    font-size: var(--body-text);
+    justify-content: space-between;
+    gap: var(--margin-small);
+    list-style: none;
+}
+
+.navigation-links > li {
+    color: var(--accent-color);
+}
+
+.navigation-links > li:hover {
+    cursor: pointer;
+    color: var(--accent-hover);
+}

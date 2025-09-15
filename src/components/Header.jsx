@@ -1,9 +1,11 @@
+import "../styles/header.css";
+
 import listToComponent from "../utils/listToComponent.jsx";
 export default function Header({ title, showExtraOptions = false }) {
   const options = ["New", "Export"];
 
   if (showExtraOptions) {
-    options.push("Load Example");
+    options.push("Load example");
     options.push("Save JSON");
   }
   return (
