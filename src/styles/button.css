@@ -1,0 +1,10 @@
+/* For main actions: Save, Export, etc. */
+.primary {
+    background-color: var(--accent-color);
+    padding: var(--padding-small) var(--padding-medium);
+    border: none;
+    border-radius: 0.375rem;
+    color: var(--background);
+    font-size: var(--body-text);
+    font-weight: var(--body-weight);
+}
