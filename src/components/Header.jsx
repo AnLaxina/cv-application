@@ -1,14 +1,17 @@
+import listToComponent from "../utils/listToComponent.jsx";
 export default function Header({ title, showExtraOptions = false }) {
-  const options = [];
-  let content = "";
+  const options = ["New", "Export"];
 
   if (showExtraOptions) {
-    content = <p>There are extra options!</p>;
+    options.push("Load Example");
+    options.push("Save JSON");
   }
   return (
     <header>
       <h1>{title}</h1>
-      {content}
+      <nav>
+        <ul className="navigation-links">{listToComponent(options)}</ul>
+      </nav>
     </header>
   );
 }
