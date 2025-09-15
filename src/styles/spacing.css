@@ -1,0 +1,15 @@
+:root {
+    --padding-small: 0.5rem;
+    --padding-medium: 1rem;
+    --padding-large: 2rem;
+
+    /* Labels, buttons */
+    --margin-small: 0.5rem;
+    /* Between blocks */
+    --margin-medium: 1rem;
+    /* Between sections/pages */
+    --margin-large: 2rem;
+
+    --line-height-body: 1.5;
+    --line-height-heading: 1.25;
+}
