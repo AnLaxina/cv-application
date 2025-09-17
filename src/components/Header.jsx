@@ -2,8 +2,6 @@ import "../styles/header.css";
 
 import listToComponent from "../utils/listToComponent.jsx";
 
-import Button from "./Button.jsx";
-
 export default function Header({ title, showExtraOptions = false }) {
   const options = ["New", "Export"];
 
@@ -15,11 +13,8 @@ export default function Header({ title, showExtraOptions = false }) {
     <header>
       <h1>{title}</h1>
       <nav>
-        <ul className="navigation-links">{listToComponent(options)}</ul>
+        <ul className="navigation-links">{listToComponent(options, true)}</ul>
       </nav>
-      <Button text="Chicken" />
-      <Button text="Chicken Nugget" type="secondary" />
-      <Button text="Chicken Link" type="link" />
     </header>
   );
 }
