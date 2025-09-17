@@ -9,6 +9,19 @@
     font-weight: var(--body-weight);
 }
 
+.primary:hover {
+    filter: brightness(95%);
+    cursor: pointer;
+}
+
+.primary:active {
+    filter: brightness(90%);
+}
+
+.primary:focus {
+    outline: 2px solid black;
+}
+
 /* For neutral things such as Reset, Cancel, etc. */
 .secondary {
     background-color: var(--background);
@@ -20,6 +33,19 @@
     font-weight: var(--body-weight);
 }
 
+.secondary:hover {
+    filter: brightness(95%);
+    cursor: pointer;
+}
+
+.secondary:active {
+    filter: brightness(90%);
+}
+
+ .secondary:focus {
+    outline: 2px solid var(--accent-color);
+}
+
 /* For inline actions such as "+ Add Education */
 .link {
     background: none;
@@ -27,4 +53,19 @@
     color: var(--accent-color);
     font-size: var(--small-text);
     font-weight: var(--body-weight);
+}
+
+.link:hover {
+    color: var(--accent-hover);
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.link:active {
+    filter: brightness(90%);
+}
+
+ .link:focus {
+    outline: 1px solid var(--accent-color);
+    text-decoration: underline;
 }
