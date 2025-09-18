@@ -4,4 +4,30 @@
     align-items: center;
     background-color: var(--background);
     padding: var(--padding-medium);
+    gap: var(--margin-medium);
+    margin-bottom: var(--margin-medium);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    min-width: 20%;
+    gap: var(--margin-medium);
+}
+
+.input-inline {
+    display: flex;
+    gap: var(--margin-small);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-newline {
+    display: flex;
+    gap: var(--margin-small);
+    flex-direction: column;
+}
+
+.input-inline > p, .input-newline > label, h2 {
+    font-weight: var(--heading-weight);
 }
