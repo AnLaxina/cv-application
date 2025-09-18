@@ -42,8 +42,8 @@
     filter: brightness(90%);
 }
 
- .secondary:focus {
-    outline: 2px solid var(--accent-color);
+.secondary:focus {
+    outline: 2px solid var(--primary-text);
 }
 
 /* For inline actions such as "+ Add Education */
@@ -58,14 +58,14 @@
 .link:hover {
     color: var(--accent-hover);
     cursor: pointer;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 .link:active {
     filter: brightness(90%);
 }
 
- .link:focus {
+.link:focus {
     outline: 1px solid var(--accent-color);
     text-decoration: underline;
 }
