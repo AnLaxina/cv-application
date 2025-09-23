@@ -1,4 +1,13 @@
+import {useState} from "react";
+
 export default function Education() {
+    const [currentStartDate, setCurrentStartDate] = useState("");
+    const [currentEndDate, setCurrentEndDate] = useState("");
+
+    function changeDate(event, stateSetter) {
+        stateSetter(event.target.value);
+    }
+
     return (
         <section className="general-info">
             <h2>Educational Experience</h2>
@@ -13,9 +22,14 @@ export default function Education() {
                 </div>
                 <div className="input-inline">
                     <label htmlFor="studyStart">Study Date Start</label>
-                    <input id="studyStart" type="date"></input>
+                    <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
+                        changeDate(event, setCurrentStartDate);
+                    }}></input>
+
                     <label htmlFor="studyEnd">Study Date End</label>
-                    <input id="studyEnd" type="date"></input>
+                    <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} onChange={(event) => {
+                        changeDate(event, setCurrentEndDate);
+                    }}></input>
                 </div>
             </div>
         </section>
