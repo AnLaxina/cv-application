@@ -2,7 +2,6 @@ import {useState} from "react";
 
 export default function Education() {
     const [currentStartDate, setCurrentStartDate] = useState("");
-    const [currentEndDate, setCurrentEndDate] = useState("");
 
     function changeDate(event, stateSetter) {
         stateSetter(event.target.value);
@@ -27,9 +26,7 @@ export default function Education() {
                     }}></input>
 
                     <label htmlFor="studyEnd">Study Date End</label>
-                    <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} onChange={(event) => {
-                        changeDate(event, setCurrentEndDate);
-                    }}></input>
+                    <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate}></input>
                 </div>
             </div>
         </section>
