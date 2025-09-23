@@ -1,5 +1,3 @@
-import Button from "./Button.jsx";
-
 export default function General() {
     return (
         <section className="general-info">
@@ -18,11 +16,6 @@ export default function General() {
                 <div className="input-newline">
                     <label htmlFor="phoneNumber">Phone Number </label>
                     <input id="phoneNumber" type="tel" maxLength="15"></input>
-                </div>
-
-                <div className="input-inline">
-                    <p>Links</p>
-                    <Button text="+ Add Link" type="secondary"/>
                 </div>
             </div>
         </section>
