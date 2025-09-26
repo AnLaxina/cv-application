@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Date from "./Date.jsx";
 
 export default function Education() {
     const [currentStartDate, setCurrentStartDate] = useState("");
@@ -19,15 +20,7 @@ export default function Education() {
                     <label htmlFor="studyName">Study Name <span>ex. Computer Science, Biology, etc.</span></label>
                     <input id="studyName" type="text"></input>
                 </div>
-                <div className="input-inline">
-                    <label htmlFor="studyStart">Study Date Start</label>
-                    <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
-                        changeDate(event, setCurrentStartDate);
-                    }}></input>
-
-                    <label htmlFor="studyEnd">Study Date End</label>
-                    <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate}></input>
-                </div>
+                <Date startDateTitle="Study Date Start" endDateTitle="Study Date End"/>
             </div>
         </section>
     )
