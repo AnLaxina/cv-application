@@ -1,13 +1,7 @@
-import {useState} from "react";
 import Date from "./Date.jsx";
 
 export default function Education() {
-    const [currentStartDate, setCurrentStartDate] = useState("");
-
-    function changeDate(event, stateSetter) {
-        stateSetter(event.target.value);
-    }
-
+    
     return (
         <section className="general-info">
             <h2>Educational Experience</h2>
