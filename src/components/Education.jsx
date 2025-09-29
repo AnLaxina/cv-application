@@ -14,7 +14,7 @@ export default function Education() {
                     <label htmlFor="studyName">Study Name <span>ex. Computer Science, Biology, etc.</span></label>
                     <input id="studyName" type="text"></input>
                 </div>
-                <Date startDateTitle="Study Date Start" endDateTitle="Study Date End"/>
+                <Date startDateTitle="Study Date Start" endDateTitle="Study Date End" showPresentOption={true}/>
             </div>
         </section>
     )

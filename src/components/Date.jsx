@@ -12,24 +12,35 @@ export default function Date({startDateTitle, endDateTitle, showPresentOption = 
         setIsDisabled(!isDisabled);
     }
 
-    return (
-        <div className="input-inline">
-            <label htmlFor="studyStart">{startDateTitle}</label>
-            <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
-                changeDate(event, setCurrentStartDate);
-            }}></input>
+    if (showPresentOption) {
+        return (
+            <div className="input-inline">
+                <label htmlFor="studyStart">{startDateTitle}</label>
+                <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
+                    changeDate(event, setCurrentStartDate);
+                }}></input>
 
-            <label htmlFor="studyEnd">{endDateTitle}</label>
-            <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} disabled={isDisabled}></input>
-
-
-            <label htmlFor="currentChoice">Currently Working</label>
-            <input id="currentChoice" type="checkbox" name="current" value="Current" onChange={changeIsDisabled}/>
+                <label htmlFor="studyEnd">{endDateTitle}</label>
+                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} disabled={isDisabled}></input>
 
 
-        </div>
+                <label htmlFor="currentChoice">Present</label>
+                <input id="currentChoice" type="checkbox" name="current" value="Current" onChange={changeIsDisabled}/>
+            </div>
+        );
+    } else {
+        return (
+            <div className="input-inline">
+                <label htmlFor="studyStart">{startDateTitle}</label>
+                <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
+                    changeDate(event, setCurrentStartDate);
+                }}></input>
 
+                <label htmlFor="studyEnd">{endDateTitle}</label>
+                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate}></input>
+            </div>
+        )
+    }
 
-    );
 
 }
