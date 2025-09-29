@@ -1,7 +1,7 @@
 import Date from "./Date.jsx";
 
 export default function Education() {
-    
+
     return (
         <section className="general-info">
             <h2>Educational Experience</h2>
