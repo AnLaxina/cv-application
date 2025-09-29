@@ -1,3 +1,7 @@
+textarea {
+    resize: vertical;
+}
+
 .general-info {
     display: flex;
     flex-direction: column;
