@@ -35,3 +35,9 @@ textarea {
 .input-inline > p, .input-newline > label, h2 {
     font-weight: var(--heading-weight);
 }
+
+.submission-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--margin-medium);
+}
