@@ -2,6 +2,10 @@ textarea {
     resize: vertical;
 }
 
+button[type="submit"] {
+    max-width: 50%;
+}
+
 .general-info {
     display: flex;
     flex-direction: column;
@@ -23,7 +27,7 @@ textarea {
     display: flex;
     gap: var(--margin-small);
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .input-newline {
