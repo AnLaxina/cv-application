@@ -1,6 +1,6 @@
 import "../styles/button.css";
 
-export default function Button({text, type, onClick = () => console.log("You clicked this button!")}) {
+export default function Button({text, type, onClick}) {
     switch (type) {
         case "link":
             return <button type="button" className="link" onClick={onClick}>{text}</button>;
