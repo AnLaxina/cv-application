@@ -1,4 +1,3 @@
-import Button from "./Button.jsx";
 import General from "./General.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
@@ -9,10 +8,11 @@ import {useState} from "react";
 
 export default function Form() {
     const [currentSection, setSection] = useState(0);
-    const sections = [<General submitMethod={handleSubmission}/>, <Education/>, <Experience/>];
+    const sections = [<General submitMethod={handleSubmission} moveMethod={moveSection}/>, <Education/>, <Experience/>];
 
     const isEnd = currentSection >= sections.length - 1;
-    const isBeginning = currentSection === 0;
+
+    // const isBeginning = currentSection === 0;
 
     function moveSection(forward = true) {
         if (!isEnd && forward) {
@@ -32,13 +32,13 @@ export default function Form() {
         <aside className="form">
             {sections[currentSection]}
 
-            <div className="submission-buttons">
-                {!isBeginning && <Button text="Back" onClick={() => moveSection(false)}/>}
+            {/*<div className="submission-buttons">*/}
+            {/*    {!isBeginning && <Button text="Back" onClick={() => moveSection(false)}/>}*/}
 
-                {!isEnd && <Button text="Next" onClick={moveSection}/>}
+            {/*    {!isEnd && <Button text="Next" onClick={moveSection}/>}*/}
 
-                {isEnd && <Button text={"Submit"} onClick={handleSubmission}/>}
-            </div>
+            {/*    {isEnd && <Button text={"Submit"} onClick={handleSubmission}/>}*/}
+            {/*</div>*/}
 
         </aside>
     )

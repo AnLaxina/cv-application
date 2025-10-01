@@ -1,17 +1,11 @@
 import Button from "./Button.jsx";
+import handleSubmit from "../utils/handleSubmit.js";
 
-export default function General({submitMethod = formData => console.log(formData)}) {
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        submitMethod(formData);
-    }
-
+export default function General({submitMethod = formData => console.log(formData), moveMethod}) {
     return (
         <section className="general-info">
             <h2>General Information</h2>
-            <form className="inputs" onSubmit={handleSubmit}>
+            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod)}>
                 <div className="input-newline">
                     <label htmlFor="name">Name </label>
                     <input id="name" name="name" type="text" required={true} placeholder="chicken"></input>
