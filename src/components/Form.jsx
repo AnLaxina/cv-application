@@ -6,13 +6,10 @@ import Experience from "./Experience.jsx";
 import "../styles/general.css";
 import {useState} from "react";
 
-function handleSubmission() {
-    console.log("You clicked me!");
-}
 
 export default function Form() {
     const [currentSection, setSection] = useState(0);
-    const sections = [<General/>, <Education/>, <Experience/>];
+    const sections = [<General submitMethod={handleSubmission}/>, <Education/>, <Experience/>];
 
     const isEnd = currentSection >= sections.length - 1;
     const isBeginning = currentSection === 0;
@@ -22,6 +19,12 @@ export default function Form() {
             setSection(currentSection + 1);
         } else if (!forward) {
             setSection(currentSection - 1);
+        }
+    }
+
+    function handleSubmission(formData) {
+        for (const [_, value] of formData) {
+            console.log(value);
         }
     }
 
