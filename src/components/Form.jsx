@@ -8,7 +8,8 @@ import {useState} from "react";
 
 export default function Form() {
     const [currentSection, setSection] = useState(0);
-    const sections = [<General submitMethod={handleSubmission} moveMethod={moveSection}/>, <Education/>, <Experience/>];
+    const sections = [<General submitMethod={handleSubmission} moveMethod={moveSection}/>,
+        <Education submitMethod={handleSubmission} moveMethod={moveSection}/>, <Experience/>];
 
     const isEnd = currentSection >= sections.length - 1;
 
@@ -23,8 +24,8 @@ export default function Form() {
     }
 
     function handleSubmission(formData) {
-        for (const [_, value] of formData) {
-            console.log(value);
+        for (const [key, value] of formData) {
+            console.log(`${key}: ${value}`);
         }
     }
 
