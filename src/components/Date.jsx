@@ -18,10 +18,11 @@ export default function Date({startDateTitle, endDateTitle, showPresentOption = 
                 <label htmlFor="studyStart">{startDateTitle}</label>
                 <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
                     changeDate(event, setCurrentStartDate);
-                }}></input>
+                }} required={true}></input>
 
                 <label htmlFor="studyEnd">{endDateTitle}</label>
-                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} disabled={isDisabled}></input>
+                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} disabled={isDisabled}
+                       required={true}></input>
 
 
                 <label htmlFor="currentChoice">Present</label>
@@ -34,10 +35,10 @@ export default function Date({startDateTitle, endDateTitle, showPresentOption = 
                 <label htmlFor="studyStart">{startDateTitle}</label>
                 <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
                     changeDate(event, setCurrentStartDate);
-                }}></input>
+                }} required={true}></input>
 
                 <label htmlFor="studyEnd">{endDateTitle}</label>
-                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate}></input>
+                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} required={true}></input>
             </div>
         )
     }
