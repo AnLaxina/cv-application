@@ -5,7 +5,7 @@ export default function General({submitMethod = formData => console.log(formData
     return (
         <section className="general-info">
             <h2>General Information</h2>
-            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod)}>
+            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod, "General")}>
                 <div className="input-newline">
                     <label htmlFor="name">Name </label>
                     <input id="name" name="name" type="text" required={true} placeholder="chicken"></input>

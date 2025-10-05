@@ -6,7 +6,7 @@ export default function Experience({submitMethod = formData => console.log(formD
     return (
         <section className="general-info">
             <h2>Professional Experience</h2>
-            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod)}>
+            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod, "Experience")}>
                 <div className="input-newline">
                     <label htmlFor="companyName">Company name</label>
                     <input id="companyName" type="text" name="companyName" placeholder="ChickenSoft"

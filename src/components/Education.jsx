@@ -7,7 +7,7 @@ export default function Education({submitMethod = formData => console.log(formDa
     return (
         <section className="general-info">
             <h2>Educational Experience</h2>
-            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod)}>
+            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod, "Education")}>
                 <div className="input-newline">
                     <label htmlFor="schoolName">School name</label>
                     <input id="schoolName" name="schoolName" type="text" placeholder="University of Chicken"
