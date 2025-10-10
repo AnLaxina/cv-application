@@ -7,7 +7,7 @@ import {useState} from "react";
 
 
 export default function Form() {
-    const data = {General: [], Education: [], Experience: []};
+    const [data, setData] = useState({General: {}, Education: {}, Experience: {}});
     const [currentSection, setSection] = useState(0);
     const sections = [<General submitMethod={addFormDataToList} moveMethod={moveSection}/>,
         <Education submitMethod={addFormDataToList} moveMethod={moveSection}/>,
@@ -26,13 +26,16 @@ export default function Form() {
     }
 
     function addFormDataToList(formData, objectType) {
-        const formEntries = {};
-        for (const [key, value] of formData) {
-            formEntries[key] = value;
-        }
-        data[objectType] = formEntries;
-        console.log(data[objectType]);
+        const formEntries = Object.fromEntries(formData.entries());
+        setData(prevData => ({
+            ...prevData,
+            [objectType]: {
+                ...prevData[objectType],
+                ...formEntries
+            },
+        }));
     }
+
 
     return (
         <aside className="form">
