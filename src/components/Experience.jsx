@@ -6,7 +6,8 @@ export default function Experience({submitMethod = formData => console.log(formD
     return (
         <section className="general-info">
             <h2>Professional Experience</h2>
-            <form className="inputs" onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod, "Experience")}>
+            <form id="experience" className="inputs"
+                  onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod, "Experience")}>
                 <div className="input-newline">
                     <label htmlFor="companyName">Company name</label>
                     <input id="companyName" type="text" name="companyName" placeholder="ChickenSoft"
@@ -19,13 +20,15 @@ export default function Experience({submitMethod = formData => console.log(formD
                 </div>
                 <div className="input-newline">
                     <label htmlFor="responsibilities">Responsibilities</label>
-                    <textarea id="responsibilities" placeholder="Ate lots of chicken! " required={true}></textarea>
+                    <textarea id="responsibilities" name="responsibilities" placeholder="Ate lots of chicken! "
+                              required={true}
+                              form="experience"></textarea>
                 </div>
 
                 <Date startDateTitle="Date Start" endDateTitle="Date End" showPresentOption={true}/>
 
                 <div className="input-inline">
-                    <Button text="Next" type="submit"/>
+                    <Button text="Preview" type="submit"/>
                 </div>
             </form>
         </section>
