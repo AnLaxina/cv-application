@@ -25,7 +25,8 @@ export default function Experience({submitMethod = formData => console.log(formD
                               form="experience"></textarea>
                 </div>
 
-                <Date startDateTitle="Date Start" endDateTitle="Date End" showPresentOption={true}/>
+                <Date startDateTitle="Date Start" endDateTitle="Date End" showPresentOption={true}
+                      attributeNames={["Date Start", "Date End"]}/>
 
                 <div className="input-inline">
                     <Button text="Preview" type="submit"/>

@@ -1,6 +1,11 @@
 import {useState} from "react";
 
-export default function Date({startDateTitle, endDateTitle, showPresentOption = false}) {
+export default function Date({
+                                 startDateTitle,
+                                 endDateTitle,
+                                 showPresentOption = false,
+                                 attributeNames = ["Study Start", "Study End"]
+                             }) {
     const [currentStartDate, setCurrentStartDate] = useState("");
     const [isDisabled, setIsDisabled] = useState(false);
 
@@ -16,12 +21,12 @@ export default function Date({startDateTitle, endDateTitle, showPresentOption = 
         return (
             <div className="input-inline">
                 <label htmlFor="studyStart">{startDateTitle}</label>
-                <input id="studyStart" type="date" name="studyStart" onChange={(event) => {
+                <input id="studyStart" type="date" name={attributeNames[0]} onChange={(event) => {
                     changeDate(event, setCurrentStartDate);
                 }} required={true}></input>
 
                 <label htmlFor="studyEnd">{endDateTitle}</label>
-                <input id="studyEnd" type="date" name="studyEnd" min={currentStartDate} disabled={isDisabled}
+                <input id="studyEnd" type="date" name={attributeNames[1]} min={currentStartDate} disabled={isDisabled}
                        required={true}></input>
 
 
