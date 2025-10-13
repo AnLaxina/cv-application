@@ -10,17 +10,17 @@ export default function Experience({submitMethod = formData => console.log(formD
                   onSubmit={(event) => handleSubmit(event, submitMethod, moveMethod, "Experience")}>
                 <div className="input-newline">
                     <label htmlFor="companyName">Company name</label>
-                    <input id="companyName" type="text" name="companyName" placeholder="ChickenSoft"
+                    <input id="companyName" type="text" name="Company Name" placeholder="ChickenSoft"
                            required={true}></input>
                 </div>
                 <div className="input-newline">
                     <label htmlFor="positionName">Position name</label>
-                    <input id="positionName" type="text" name="positionName" placeholder="Manager of Chicken"
+                    <input id="positionName" type="text" name="Position Name" placeholder="Manager of Chicken"
                            required={true}></input>
                 </div>
                 <div className="input-newline">
                     <label htmlFor="responsibilities">Responsibilities</label>
-                    <textarea id="responsibilities" name="responsibilities" placeholder="Ate lots of chicken! "
+                    <textarea id="responsibilities" name="Responsibilities" placeholder="Ate lots of chicken! "
                               required={true}
                               form="experience"></textarea>
                 </div>

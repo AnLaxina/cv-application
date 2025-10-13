@@ -31,7 +31,8 @@ export default function Date({
 
 
                 <label htmlFor="currentChoice">Present</label>
-                <input id="currentChoice" type="checkbox" name="current" value="Current" onChange={changeIsDisabled}/>
+                <input id="currentChoice" type="checkbox" name={attributeNames[1]} value="Current"
+                       onChange={changeIsDisabled}/>
             </div>
         );
     } else {

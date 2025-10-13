@@ -1,6 +1,7 @@
 import General from "./General.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
+import Preview from "./Preview.jsx";
 
 import "../styles/general.css";
 import {useState} from "react";
@@ -11,7 +12,7 @@ export default function Form() {
     const [currentSection, setSection] = useState(0);
     const sections = [<General submitMethod={addFormDataToList} moveMethod={moveSection}/>,
         <Education submitMethod={addFormDataToList} moveMethod={moveSection}/>,
-        <Experience submitMethod={addFormDataToList} moveMethod={moveSection}/>];
+        <Experience submitMethod={addFormDataToList} moveMethod={moveSection}/>, <Preview data={data}/>];
 
     const isEnd = currentSection >= sections.length - 1;
 
