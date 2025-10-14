@@ -1,0 +1,19 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-medium);
+    gap: var(--margin-large);
+}
+
+* {
+    background-color: var(--background);
+}
+
+footer {
+    display: flex;
+    padding: var(--padding-medium);
+    font-size: var(--body-text);
+    font-weight: var(--heading-weight);
+    justify-content: center;
+}
+

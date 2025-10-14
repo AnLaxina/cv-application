@@ -5,7 +5,10 @@ function App() {
     return (
         <>
             <Header title="CV Application with Chicken!" showExtraOptions={true}/>
-            <Form />
+            <Form/>
+            <footer>
+                <p>2025 AnLaxina</p>
+            </footer>
         </>
     );
 }
