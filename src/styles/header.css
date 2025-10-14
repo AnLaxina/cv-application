@@ -1,7 +1,8 @@
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    font-size: var(--h3-size);
     background-color: var(--background);
     padding: var(--padding-medium);
 }
