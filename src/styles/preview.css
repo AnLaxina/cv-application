@@ -1,0 +1,16 @@
+.section-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 40%;
+    gap: var(--margin-small);
+}
+
+.preview-data {
+    display: flex;
+    gap: var(--margin-small);
+    justify-content: space-between;
+}
+
+#field-name {
+    font-weight: var(--heading-weight);
+}
