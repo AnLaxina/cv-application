@@ -8,6 +8,8 @@ export default function Button({text, type, onClick}) {
             return <button type="button" className="secondary" onClick={onClick}>{text}</button>;
         case "submit":
             return <button type="submit" className="primary" onClick={onClick}>{text}</button>;
+        case "editIcon":
+            return <button type="button" className="icon" onClick={onClick}><img src="/edit.png" alt="Edit"/></button>
         default:
             return <button type="button" className="primary" onClick={onClick}>{text}</button>;
     }

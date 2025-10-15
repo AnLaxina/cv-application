@@ -69,3 +69,19 @@
     outline: 1px solid var(--accent-color);
     text-decoration: underline;
 }
+
+/* For icons */
+.icon {
+    width: 32px;
+    height: 32px;
+    border: none;
+}
+
+.icon:hover {
+    filter: brightness(95%);
+    cursor: pointer;
+}
+
+.icon:focus {
+    outline: 1px solid var(--primary-text);
+}
