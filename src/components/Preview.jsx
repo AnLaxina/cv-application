@@ -1,4 +1,5 @@
 import "../styles/preview.css";
+import Button from "./Button.jsx";
 
 export default function Preview({data}) {
     function addSection(sectionName) {
@@ -24,17 +25,26 @@ export default function Preview({data}) {
         <section className="general-info">
             <h2>Preview & Summary</h2>
             <div className="section-container">
-                <h2>General</h2>
+                <div className="section-header">
+                    <h2>General</h2>
+                    <Button text="" type="editIcon" onClick={() => console.log("Edit Time!")}/>
+                </div>
                 {addSection("General")}
             </div>
 
             <div className="section-container">
-                <h2>Education</h2>
+                <div className="section-header">
+                    <h2>Education</h2>
+                    <Button text="" type="editIcon" onClick={() => console.log("Hello")}/>
+                </div>
                 {addSection("Education")}
             </div>
 
             <div className="section-container">
-                <h2>Experience</h2>
+                <div className="section-header">
+                    <h2>Experience</h2>
+                    <Button text="" type="editIcon" onClick={() => console.log("Hello")}/>
+                </div>
                 {addSection("Experience")}
             </div>
         </section>
