@@ -2,6 +2,8 @@ export default function Preview({data}) {
     function addSection(sectionName) {
         const entries = Object.entries(data[sectionName]);
         return entries.map((entry) => {
+            // entry[0] = the field name
+            // entry[1] = the field value
             return sectionLayout(entry[0], entry[1]);
         });
     }
