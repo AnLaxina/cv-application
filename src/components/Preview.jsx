@@ -43,7 +43,7 @@ export default function Preview({data}) {
         );
     }
 
-    // TODO: - Make it revert back to the preview once done
+    
     return (
         <section className="general-info">
             <h2>Preview & Summary</h2>
