@@ -17,8 +17,6 @@ export default function Form() {
 
     const isEnd = currentSection >= sections.length - 1;
 
-    // const isBeginning = currentSection === 0;
-
     function moveSection(forward = true) {
         if (!isEnd && forward) {
             setSection(currentSection + 1);
@@ -38,19 +36,9 @@ export default function Form() {
         }));
     }
 
-
     return (
         <aside className="form">
             {sections[currentSection]}
-
-            {/*<div className="submission-buttons">*/}
-            {/*    {!isBeginning && <Button text="Back" onClick={() => moveSection(false)}/>}*/}
-
-            {/*    {!isEnd && <Button text="Next" onClick={moveSection}/>}*/}
-
-            {/*    {isEnd && <Button text={"Submit"} onClick={handleSubmission}/>}*/}
-            {/*</div>*/}
-
         </aside>
     )
 }
