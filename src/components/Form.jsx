@@ -12,7 +12,8 @@ export default function Form() {
     const [currentSection, setSection] = useState(0);
     const sections = [<General submitMethod={addFormDataToList} moveMethod={moveSection}/>,
         <Education submitMethod={addFormDataToList} moveMethod={moveSection}/>,
-        <Experience submitMethod={addFormDataToList} moveMethod={moveSection}/>, <Preview data={data}/>];
+        <Experience submitMethod={addFormDataToList} moveMethod={moveSection}/>,
+        <Preview data={data} editFormDataMethod={addFormDataToList}/>];
 
     const isEnd = currentSection >= sections.length - 1;
 

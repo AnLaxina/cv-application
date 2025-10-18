@@ -5,7 +5,7 @@ import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import {useState} from "react";
 
-export default function Preview({data}) {
+export default function Preview({data, editFormDataMethod}) {
     const [shouldEditGeneral, setShouldEditGeneral] = useState(false);
     const [shouldEditEducation, setShouldEditEducation] = useState(false);
     const [shouldEditExperience, setShouldEditExperience] = useState(false);
@@ -42,7 +42,7 @@ export default function Preview({data}) {
 
         );
     }
-    
+
     return (
         <section className="general-info">
             <h2>Preview & Summary</h2>
@@ -51,7 +51,11 @@ export default function Preview({data}) {
                     <h2>General</h2>
                     <Button text="" type="editIcon" onClick={() => editSection("General")}/>
                 </div>
-                {shouldEditGeneral ? <General buttonText="Done"/> : addSection("General")}
+                {shouldEditGeneral ?
+                    <General buttonText="Done"
+                             submitMethod={editFormDataMethod}
+                             moveMethod={() => editSection("General")}
+                    /> : addSection("General")}
             </div>
 
             <div className="section-container">
@@ -59,7 +63,9 @@ export default function Preview({data}) {
                     <h2>Education</h2>
                     <Button text="" type="editIcon" onClick={() => editSection("Education")}/>
                 </div>
-                {shouldEditEducation ? <Education buttonText="Done"/> : addSection("Education")}
+                {shouldEditEducation ? <Education buttonText="Done" submitMethod={editFormDataMethod}
+                                                  moveMethod={() => editSection("Education")}/> :
+                    addSection("Education")}
             </div>
 
             <div className="section-container">
@@ -67,7 +73,9 @@ export default function Preview({data}) {
                     <h2>Experience</h2>
                     <Button text="" type="editIcon" onClick={() => editSection("Experience")}/>
                 </div>
-                {shouldEditExperience ? <Experience buttonText="Done"/> : addSection("Experience")}
+                {shouldEditExperience ? <Experience buttonText="Done" submitMethod={editFormDataMethod}
+                                                    moveMethod={() => editSection("Experience")}/> :
+                    addSection("Experience")}
             </div>
         </section>
     );
