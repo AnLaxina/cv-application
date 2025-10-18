@@ -1,7 +1,7 @@
 import Button from "./Button.jsx";
 import handleSubmit from "../utils/handleSubmit.js";
 
-export default function General({submitMethod = formData => console.log(formData), moveMethod}) {
+export default function General({submitMethod = formData => console.log(formData), moveMethod, buttonText = "Next"}) {
     return (
         <section className="general-info">
             <h2>General Information</h2>
@@ -23,7 +23,7 @@ export default function General({submitMethod = formData => console.log(formData
                 </div>
 
                 <div className="input-inline">
-                    <Button text="Next" type="submit"/>
+                    <Button text={buttonText} type="submit"/>
                 </div>
             </form>
         </section>

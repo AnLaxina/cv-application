@@ -2,7 +2,7 @@ import Date from "./Date.jsx";
 import Button from "./Button.jsx";
 import handleSubmit from "../utils/handleSubmit.js";
 
-export default function Education({submitMethod = formData => console.log(formData), moveMethod}) {
+export default function Education({submitMethod = formData => console.log(formData), moveMethod, buttonText = "Next"}) {
 
     return (
         <section className="general-info">
@@ -22,7 +22,7 @@ export default function Education({submitMethod = formData => console.log(formDa
                       attributeNames={["Study Date Start", "Study Date End"]}/>
 
                 <div className="input-inline">
-                    <Button text="Next" type="submit"/>
+                    <Button text={buttonText} type="submit"/>
                 </div>
             </form>
         </section>

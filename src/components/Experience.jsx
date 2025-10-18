@@ -2,7 +2,11 @@ import Date from "./Date.jsx";
 import Button from "./Button.jsx";
 import handleSubmit from "../utils/handleSubmit.js";
 
-export default function Experience({submitMethod = formData => console.log(formData), moveMethod}) {
+export default function Experience({
+                                       submitMethod = formData => console.log(formData),
+                                       moveMethod,
+                                       buttonText = "Preview"
+                                   }) {
     return (
         <section className="general-info">
             <h2>Professional Experience</h2>
@@ -29,7 +33,7 @@ export default function Experience({submitMethod = formData => console.log(formD
                       attributeNames={["Date Start", "Date End"]}/>
 
                 <div className="input-inline">
-                    <Button text="Preview" type="submit"/>
+                    <Button text={buttonText} type="submit"/>
                 </div>
             </form>
         </section>

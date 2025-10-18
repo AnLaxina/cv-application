@@ -42,7 +42,6 @@ export default function Preview({data}) {
 
         );
     }
-
     
     return (
         <section className="general-info">
@@ -52,7 +51,7 @@ export default function Preview({data}) {
                     <h2>General</h2>
                     <Button text="" type="editIcon" onClick={() => editSection("General")}/>
                 </div>
-                {shouldEditGeneral ? <General/> : addSection("General")}
+                {shouldEditGeneral ? <General buttonText="Done"/> : addSection("General")}
             </div>
 
             <div className="section-container">
@@ -60,7 +59,7 @@ export default function Preview({data}) {
                     <h2>Education</h2>
                     <Button text="" type="editIcon" onClick={() => editSection("Education")}/>
                 </div>
-                {shouldEditEducation ? <Education/> : addSection("Education")}
+                {shouldEditEducation ? <Education buttonText="Done"/> : addSection("Education")}
             </div>
 
             <div className="section-container">
@@ -68,7 +67,7 @@ export default function Preview({data}) {
                     <h2>Experience</h2>
                     <Button text="" type="editIcon" onClick={() => editSection("Experience")}/>
                 </div>
-                {shouldEditExperience ? <Experience/> : addSection("Experience")}
+                {shouldEditExperience ? <Experience buttonText="Done"/> : addSection("Experience")}
             </div>
         </section>
     );
