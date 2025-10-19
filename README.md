@@ -29,5 +29,8 @@ re-renders, etc.
     - Or add a PDF preview window!
 
 ## Screenshots
+<img width="1180" height="870" alt="image" src="https://github.com/user-attachments/assets/03e2c269-7f61-41c4-8830-324eb49f73fb" />
 
-Will add them soon!
+<img width="858" height="881" alt="image" src="https://github.com/user-attachments/assets/59beac2c-ffa2-4e3f-89ef-26c281422f59" />
+
+
