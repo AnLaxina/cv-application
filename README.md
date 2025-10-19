@@ -1,12 +1,33 @@
-# React + Vite
+# CV Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and basic application that takes in form data and generates a rudimentary CV in a form of a PDF.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Editable forms
+- PDF Generation
 
-## Expanding the ESLint configuration
+## Tools Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **JavaScript**
+- **HTML + CSS**
+- **React + Vite**
+- **[jsPDF](https://github.com/parallax/jsPDF) for PDF Exports**
+
+## Why I Built This
+
+For practicing React!! I have been building applications with vanilla HTML + CSS + JS for the vast majority of my
+projects
+so building a relatively simple project like this helped me understand concepts such as React states and how it
+re-renders, etc.
+
+## Potential Improvements
+
+- Give the user the ability to add more experience to the `Experience` section
+- **Add mobile support!** Right now, the UI for mobile looks terrible 😭
+- Add more functionality for styling the PDF export.
+    - Or add a PDF preview window!
+
+## Screenshots
+
+Will add them soon!
