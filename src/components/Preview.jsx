@@ -5,7 +5,7 @@ import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import {useState} from "react";
 
-export default function Preview({data, editFormDataMethod}) {
+export default function Preview({data, editFormDataMethod, submitMethod}) {
     const [shouldEditGeneral, setShouldEditGeneral] = useState(false);
     const [shouldEditEducation, setShouldEditEducation] = useState(false);
     const [shouldEditExperience, setShouldEditExperience] = useState(false);
@@ -77,6 +77,7 @@ export default function Preview({data, editFormDataMethod}) {
                                                     moveMethod={() => editSection("Experience")}/> :
                     addSection("Experience")}
             </div>
+            <Button text="Export PDF" onClick={() => submitMethod(document.querySelector("#pdf-submission"))}/>
         </section>
     );
 }
